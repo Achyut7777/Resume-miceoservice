@@ -11,12 +11,8 @@ require('dotenv/config');
 
 
 // Step 2 - connect to the database
-
-mongoose.connect(process.env.MONGO_URL,
-	{ useNewUrlParser: true, useUnifiedTopology: true }, err => {
-		console.log('connected')
-	});
-
+const dbConnect = require("./db/dbConnect");
+dbConnect();
 
 
 
